@@ -1,0 +1,33 @@
+﻿<Window x:Class="WizardChessUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Auto Chess" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Текстовый блок для отображения количества монет -->
+        <TextBlock x:Name="textBlockPlayerMoney" Text="Монеты: 250" FontSize="24" Margin="330,0,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <!-- Список доступных юнитов -->
+        <ListBox x:Name="listBoxAvailableUnits" Height="350" Margin="10,68,125,16" />
+
+        <!-- Список выбранных юнитов -->
+        <ListBox x:Name="listBoxPlayerTeam" Margin="125,68,10,10" Grid.Column="1" />
+
+        <!-- Кнопка для добавления выбранного юнита в команду -->
+        <Button x:Name="buttonAddToTeam" Content="Добавить юнита" Width="150" Height="30" Margin="10,10,10,0" Click="buttonAddToTeam_Click" Grid.Column="0" VerticalAlignment="Top" />
+
+        <!-- Кнопка для начала боя -->
+        <Button x:Name="buttonStartBattle" Content="Начать бой" Width="150" Height="30" Margin="10,10,10,0" Click="buttonStartBattle_Click" Grid.Column="1" VerticalAlignment="Top" />
+
+        <!-- Журнал боя -->
+        <ListBox x:Name="listBoxBattleLog" Height="366" Margin="280,0,275,0" Grid.ColumnSpan="2" VerticalAlignment="Bottom" />
+
+        <!-- Текстовый блок для отображения выбранного юнита -->
+        <TextBlock x:Name="textBlockSelectedUnit" Text="Выбранный юнит: " Margin="10,10,10,0" Grid.ColumnSpan="2" VerticalAlignment="Bottom" />
+        <Label Content="ПОЛЕ БОЯ" HorizontalAlignment="Left" Margin="366,25,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
